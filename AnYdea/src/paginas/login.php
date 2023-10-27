@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form class="formulario" action="logar.php" method="POST">
+    <form class="formulario" action="" method="POST">
         <div class="card">
             <div class="card-top">
                 <img class="imagemlog" src="../imagens/do-utilizador.png" alt="usuario">
