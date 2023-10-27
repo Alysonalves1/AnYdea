@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnYdea</title>
     
-    <link rel="stylesheet" href="./src/css/pagina-inicial.css">
-    <link rel="stylesheet" href="./src/css/lupa.css">
+    <link rel="stylesheet" href="../css/index.css">
+
 </head>
 <body class="pagina-inicial">
     
     <header>
         <nav>
             <ul>
-                <li><a href="index.php">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
+                <!-- <li><a href="index.php">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li> -->
                 <li><a href="Login.html">Login</a></li>
                 
             </header>
@@ -26,7 +26,7 @@
     <div class="search-box">
         <input type="text" class="search-txt" placeholder="Pesquisa">
         <a href="#">
-            <img src="./src/imagens/search_magnifier_icon_145939.svg" alt="Lupa" height="30" width="50" >
+            <img src="../imagens/search_magnifier_icon_145939.svg" alt="Lupa" height="30" width="50" >
         </a>
     </div>
     <main>

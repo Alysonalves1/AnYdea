@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnYdea</title>
 
-    <link rel="stylesheet" href="./src/css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
 
 </head>
 <body>
     <form class="formulario" action="logar.php" method="POST">
         <div class="card">
             <div class="card-top">
-                <img class="imagemlog" src="./src/imagens/do-utilizador.png" alt="usuario">
+                <img class="imagemlog" src="../imagens/do-utilizador.png" alt="usuario">
                 <h2>Login</h2>
             </div>
 
@@ -34,7 +34,7 @@
             <div class="group btn">
                 <button type="submit">ACESSAR</button>
             </div>
-            <a href="./index.php">voltar</a>
+            <a class="back" href="../../index.php">voltar</a>
         </div>
     </form>
 </body>

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnYdea</title>
 
-    <link rel="stylesheet" href="./src/css/paginas/paginainicial.css">
-    <link rel="stylesheet" href="./src/css/lupa.css">
+    <link rel="stylesheet" href="./src/css/index.css">
 
 </head>
 <body>
@@ -14,12 +13,13 @@
     <header>
         <nav>
             <ul>
-                <!-- <li><img class="oi" src="./src/imagens/AnYdea (5) (1).png" alt=""></li> -->
-                <li><a href="sobre.php">Sobre</a></li>
+                <!-- <li><img class="oi" src="./src/imagens/transferir2.png" alt="" width="30" height="35"></li> -->
+                <li><a href="./src/paginas/sobre.php">Sobre</a></li>
                 
             </ul>
         </nav>
-        <a class="btn" href="Login.php">Login</a>
+        <a class="btn" href="./src/paginas/login.php">Login</a>
+        <a class="btn2" href="./src/paginas/cadastro.php">Cadastrar</a>
     </header>
 
     <div class="search-box">
