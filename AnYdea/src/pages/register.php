@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AnYdea</title>
 
-    <link rel="stylesheet" href="../css/cadastro.css">
-
+    <link rel="stylesheet" href="../css/register.css">
+    
 </head>
 <body>
-    <form class="formulario" action="../CRUD/criar.php" method="POST">
+    <form class="formulario" action="../CRUD/add_user.php" method="POST">
         <div class="card">
             <div class="card-top">
                 <h2>Cadastrar</h2>
@@ -30,7 +30,17 @@
                 <input type="password" name="senha" placeholder="Crie uma Senha" required>
             </div>
 
+            <?php
+            session_start();
+            if (isset($_SESSION['mensagem'])) {
+                echo '<p class="mensagem">' . $_SESSION['mensagem'] . '</p>';
+                unset($_SESSION['mensagem']); // Limpa a mensagem
+            }
 
+            ?>
+
+            <input type="hidden" name="create_user" value="1">
+            
             <div class="group btn">
                 <button type="submit">Criar</button>
             </div>

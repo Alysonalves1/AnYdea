@@ -14,18 +14,18 @@
         <nav>
             <ul>
                 <!-- <li><img class="oi" src="./src/imagens/transferir2.png" alt="" width="30" height="35"></li> -->
-                <li><a href="./src/paginas/sobre.php">Sobre</a></li>
+                <li><a href="./src/pages/about.php">Sobre</a></li>
                 
             </ul>
         </nav>
-        <a class="btn" href="./src/paginas/login.php">Login</a>
-        <a class="btn2" href="./src/paginas/cadastro.php">Cadastrar</a>
+        <a class="btn" href="./src/pages/login.php">Login</a>
+        <a class="btn2" href="./src/pages/register.php">Cadastrar</a>
     </header>
 
     <div class="search-box">
         <input type="text" class="search-txt" placeholder="Pesquisa">
         <a href="#">
-            <img src="./src/imagens/search_magnifier_icon_145939.svg" alt="Lupa" height="30" width="50" >
+            <img src="./src/img/search_magnifier_icon_145939.svg" alt="Lupa" height="30" width="50" >
         </a>
     </div>
     

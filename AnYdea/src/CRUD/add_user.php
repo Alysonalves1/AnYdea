@@ -1,13 +1,30 @@
 <?php
-include 'conexao.php';
+session_start();
+
+include 'connection.php';
 
 if (isset($_POST['create_user'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $sql = "INSERT INTO users (name, email, password) VALUES ('$nome','$email', '$senha')";
-    $conn->query($sql);
+    // Verificar se o email já existe
+    $checkEmailQuery = "SELECT * FROM user WHERE email = '$email'";
+    $result = $conn->query($checkEmailQuery);
+
+    if ($result->num_rows > 0) {
+        $_SESSION['mensagem'] = "Email já cadastrado. Por favor, escolha outro.";
+        header("location: ../pages/register.php");
+        
+    } else {
+        $insertQuery = "INSERT INTO user (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
+        if ($conn->query($insertQuery) === TRUE) {
+            echo "Cadastro realizado com sucesso!";
+            header("location: ../../index.php");
+        } else {
+            echo "Erro ao cadastrar: " . $conn->error;
+        }
+    }
 }
 
 
