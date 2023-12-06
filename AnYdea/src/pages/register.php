@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <form class="formulario" action="../CRUD/add_user.php" method="POST">
+    <form class="formulario" action="../CRUD/crud_user/add_user.php" method="POST">
         <div class="card">
             <div class="card-top">
                 <h2>Cadastrar</h2>

@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include '../connection.php';
 
 session_start();
 
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        header("location: ../pages/testelogin.php");
+        header("location: ../../pages/testelogin.php");
         exit;
     } else {
         $_SESSION['mensagem'] = "Credenciais inválidas. Tente novamente.";

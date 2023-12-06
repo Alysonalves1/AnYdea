@@ -9,7 +9,7 @@
 
 </head>
 <body>
-    <form class="formulario" action="../CRUD/read.php" method="POST">
+    <form class="formulario" action="../CRUD/crud_user/read.php" method="POST">
         <div class="card">
             <div class="card-top">
                 <img class="imagemlog" src="../img/do-utilizador.png" alt="usuario">

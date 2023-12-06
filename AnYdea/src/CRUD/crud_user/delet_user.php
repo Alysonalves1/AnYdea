@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include '../connection.php';
 
 if (isset($_GET['delete_user'])) {
     $user_id = $_GET['delete_user'];

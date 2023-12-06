@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include 'connection.php';
+include '../connection.php';
 
 if (isset($_POST['create_user'])) {
     $nome = $_POST['nome'];
@@ -14,13 +14,13 @@ if (isset($_POST['create_user'])) {
 
     if ($result->num_rows > 0) {
         $_SESSION['mensagem'] = "Email já cadastrado. Por favor, escolha outro.";
-        header("location: ../pages/register.php");
+        header("location: ../../pages/register.php");
         
     } else {
         $insertQuery = "INSERT INTO user (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
         if ($conn->query($insertQuery) === TRUE) {
             echo "Cadastro realizado com sucesso!";
-            header("location: ../../index.php");
+            header("location: ../../../index.php");
         } else {
             echo "Erro ao cadastrar: " . $conn->error;
         }
