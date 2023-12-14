@@ -25,40 +25,39 @@
         <a class="btn" href="./src/pages/login.php">Login</a>
         <a class="btn2" href="./src/pages/register.php">Cadastrar</a>
     </header>
-
-    <div class="search-box">
-        <input type="text" class="search-txt" placeholder="Pesquisa">
-        <a href="#">
-            <img src="./src/img/search_magnifier_icon_145939.svg" alt="Lupa" height="30" width="50">
-        </a>
+    
+    <ul>
+    <div class="text-post">
+        <h2>Faça um post agora!!</h2>
+        <div class="container">
+            <a href="./src/pages/post.php">criar nova postagem</a><br>
+        </div>
     </div>
+    </ul>
+    
+    <div class="postagens">
 
-    <div class="container">
-        <h1>Sistema de postagem</h1>
-        <a href="./src/pages/post.php">criar nova postagem</a><br>
-    </div>
-
-    <?php
-
-    include "./src/CRUD/connection.php";
-
+        <?php
+    include "src/CRUD/connection.php";
+    
     $sql = "SELECT * FROM posts ORDER BY ID DESC";
     $resultado = $conn->query($sql);
-
+    
     if ($resultado->num_rows > 0) {
         while ($row = $resultado->fetch_assoc()) {
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
-
+            
             echo "<h2>$titulo<h2>";
             echo "<p>$conteudo<p>";
             echo "<hr>";
         }
     }
-
+    
     $conn->close();
-
     ?>
+
+</div>
 
 </body>
 
