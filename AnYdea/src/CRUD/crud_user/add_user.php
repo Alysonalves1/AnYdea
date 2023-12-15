@@ -20,7 +20,7 @@ if (isset($_POST['create_user'])) {
         $insertQuery = "INSERT INTO user (nome, email, senha) VALUES ('$nome', '$email', '$senha')";
         if ($conn->query($insertQuery) === TRUE) {
             echo "Cadastro realizado com sucesso!";
-            header("location: ../../../index.php");
+            header("Location: ../../pages/login.php");
         } else {
             echo "Erro ao cadastrar: " . $conn->error;
         }

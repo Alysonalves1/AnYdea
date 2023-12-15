@@ -1,8 +1,8 @@
 <?php
 include '../connection.php';
 
-if (isset($_GET['user_id'])) {
-    $user_id = $_GET['user_id'];
+if (isset($_GET['PersonID'])) {
+    $user_id = $_GET['PersonID'];
 
     $sql = "SELECT * FROM user WHERE id = $user_id";
     $result = $conn->query($sql);
@@ -25,3 +25,4 @@ if (isset($_POST['update_user'])) {
     header("Location: criar.php");
     exit;
 }
+?>
