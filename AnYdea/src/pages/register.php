@@ -44,7 +44,7 @@
             <div class="group btn">
                 <button type="submit">Criar</button>
             </div>
-            <a class="back" href="../../index.php">voltar</a>
+            <a class="back" href="./login.php">login</a>
         </div>
     </form>
 </body>
