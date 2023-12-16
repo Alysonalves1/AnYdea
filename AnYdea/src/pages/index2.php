@@ -18,18 +18,18 @@
         <nav>
             <ul>
                 <!-- <li><img class="oi" src="./src/imagens/transferir2.png" alt="" width="30" height="35"></li> -->
-                <li><a href="./src/pages/about.php">Sobre</a></li>
+                <li><a href="./about.php">Sobre</a></li>
 
             </ul>
         </nav>
-        <a class="btn" href="./profile.php ">Perfil</a>
+        <a class="btn" href="./profile.php">Perfil</a>
     </header>
     
     <ul>
     <div class="text-post">
         <h2>Faça um post agora!!</h2>
         <div class="container">
-            <a href="./src/pages/post.php">criar nova postagem</a><br>
+            <a href="../pages/post.php">criar nova postagem</a><br>
         </div>
     </div>
     </ul>
@@ -48,7 +48,7 @@
             $conteudo = $row['conteudo'];
             
             echo "<h2>$titulo<h2>";
-            echo "<p>$conteudo<p>";
+            echo "<h3>$conteudo<h3>";
             echo "<hr>";
         }
     }

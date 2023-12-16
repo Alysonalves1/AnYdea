@@ -11,7 +11,7 @@ $stmt = $conn->prepare("INSERT INTO posts (titulo, conteudo) VALUE (?, ?)");
 $stmt->bind_param("ss", $titulo, $conteudo);
 
 if ($stmt->execute()){
-    header("location: ../../index.php");
+    header("location: ../pages/index2.php");
 } else {
     echo "Erro ao salvar a postagem: " . $stmt->error;
 }

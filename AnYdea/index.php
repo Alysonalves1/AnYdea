@@ -26,15 +26,7 @@
         <a class="btn2" href="./src/pages/register.php">Cadastrar</a>
     </header>
     
-    <ul>
-    <div class="text-post">
-        <h2>Faça um post agora!!</h2>
-        <div class="container">
-            <a href="./src/pages/post.php">criar nova postagem</a><br>
-        </div>
-    </div>
-    </ul>
-    
+
     <div class="postagens">
 
         <?php

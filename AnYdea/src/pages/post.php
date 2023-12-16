@@ -1,25 +1,3 @@
-<?php
-session_start();
-
-// Verificar se o usuário está autenticado
-if (!isset($_SESSION['PersonID'])) {
-    // Redirecionar para a página de registro se não estiver autenticado
-    header("Location: ./register.php");
-    exit();
-}
-$id_postagem = $_POST['id_postagem']; 
-// ID do usuário autenticado
-$id_usuario = $_SESSION['PersonID'];
-
-$titulo = $_POST['titulo'];
-$conteudo = $_POST['conteudo'];
-
-// Inserir postagem no banco de dados associando ao usuário autenticado
-$stmt = $conn->prepare("INSERT INTO posts (titulo, conteudo, id_usuario) VALUES (?, ?, ?)");
-$stmt->bind_param("ssi", $titulo, $conteudo, $id_usuario);
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -39,12 +17,12 @@ $stmt->bind_param("ssi", $titulo, $conteudo, $id_usuario);
     <label for="conteudo">Conteúdo:</label><br>
     <textarea name="conteudo" required></textarea><br>
 
-    <input type="submit" value="Publicar"><br>
-    <a href="../../index.php" >Cancelar</a>
+    <input type="submit" href="../pages/index2.php" value="Publicar"><br>
+    <a href="../pages/index2.php" >Cancelar</a>
     </form>
-    <div>
+    <!-- <div>
 
-    <h3>Faça um Comentário</h3>
+    <h3>Faça um Comentário</h3> 
 
     <form action="processar_comentario.php" method="post">
         <input type="hidden" name="id_postagem" value="<?php echo $id_postagem; ?>">
@@ -57,7 +35,7 @@ $stmt->bind_param("ssi", $titulo, $conteudo, $id_usuario);
 
         <button type="submit">Enviar Comentário</button>
     </form>
-</div>
+</div> -->
 </div>
 </body>
 </html>
