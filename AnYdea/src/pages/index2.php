@@ -18,7 +18,7 @@
         <nav>
             <ul>
                 <!-- <li><img class="oi" src="./src/imagens/transferir2.png" alt="" width="30" height="35"></li> -->
-                <li><a href="./about.php">Sobre</a></li>
+                <li><a href="./about2.php">Sobre</a></li>
 
             </ul>
         </nav>
@@ -49,7 +49,7 @@
             
             echo "<h2>$titulo<h2>";
             echo "<h3>$conteudo<h3>";
-            echo "<hr>";
+            
         }
     }
 

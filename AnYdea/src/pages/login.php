@@ -37,7 +37,7 @@
             ?>
             
             <div class="group btn">
-                <button type="submit">ACESSAR</button>
+                <button type="submit">Acessar</button>
                 
             </div>
             

@@ -14,7 +14,8 @@ body.pagina-inicial {
 header {
     background-color: rgb(40, 4, 106);
     color: #fff;
-    padding: 15px 0;
+    padding: 15px;
+    
 }
 
 /* Estilos para a navegação */
@@ -108,4 +109,13 @@ header img {
 
 .postagens{
     text-align: center;
+   
+}
+
+.postagens h2{
+   
+}
+.postagens p{
+    padding: 10px;
+   
 }

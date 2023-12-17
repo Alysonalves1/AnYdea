@@ -40,9 +40,9 @@
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
             
-            echo "<h2>$titulo<h2>";
-            echo "<p>$conteudo<p>";
-            echo "<hr>";
+            echo "<h2>Titulo: <br>$titulo<h2>";
+            echo "<p>Conteúdo: <br>$conteudo<p>";
+            
         }
     }
 

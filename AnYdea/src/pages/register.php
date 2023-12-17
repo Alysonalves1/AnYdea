@@ -16,7 +16,7 @@
             </div>
 
             <div class="group">
-                <label>Nome</label>
+                <label>Nome de Usuário</label>
                 <input type="text" name="nome" placeholder="Digite seu Nome" required>
             </div>
 
@@ -44,7 +44,7 @@
             <div class="group btn">
                 <button type="submit">Criar</button>
             </div>
-            <a class="back" href="./login.php">login</a>
+            <a class="back" href="../../index.php">Voltar</a>
         </div>
     </form>
 </body>
