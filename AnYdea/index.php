@@ -7,7 +7,7 @@
     <title>AnYdea</title>
 
     <link rel="stylesheet" href="./src/css/index.css">
-    <!-- <link rel="stylesheet" href="./src/css/post.css"> -->
+   
 
 
 </head>
@@ -32,17 +32,23 @@
         <?php
     include "src/CRUD/connection.php";
     
-    $sql = "SELECT * FROM posts ORDER BY ID DESC";
+    $sql = "SELECT posts.titulo, posts.conteudo, user.nome 
+    FROM posts 
+    INNER JOIN user ON posts.PersonID = user.PersonID 
+    ORDER BY posts.PostID DESC";
     $resultado = $conn->query($sql);
     
     if ($resultado->num_rows > 0) {
         while ($row = $resultado->fetch_assoc()) {
+            $criador = $row['nome'];
+
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
+
+            echo "<h2>Publicado por: $criador</h2>";
+            echo "<h2>Titulo: <br>$titulo<h2>";
+            echo "<p>Conteúdo: <br>$conteudo<p>";
             
-            echo "<h2>$titulo<h2>";
-            echo "<p>$conteudo<p>";
-            echo "<hr>";
         }
     }
 

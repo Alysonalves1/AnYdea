@@ -13,9 +13,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($result->num_rows > 0) {
         header("location: ../../pages/index2.php");
+        $_SESSION['email'] = $email;
         exit;
     } else {
         $_SESSION['mensagem'] = "Credenciais inválidas. Tente novamente.";
         header("location: ../../pages/login.php");
     }
+}
+
+
+// Verificar se o botão de logout foi acionado
+if (isset($_POST['logout'])) {
+    // Destruir todos os dados da sessão
+    session_destroy();
+
+    
+    header("Location: ../../index.php");
+    exit;
 }

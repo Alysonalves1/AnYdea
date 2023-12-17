@@ -1,10 +1,15 @@
 DROP DATABASE IF EXISTS anydea;
-CREATE DATABASE anydea;
-USE anydea;
-CREATE TABLE user (
-  PersonID int AUTO_INCREMENT PRIMARY KEY,
-  NOME varchar(100) NOT NULL,
-  EMAIL varchar(100) NOT NULL,
-  SENHA varchar(8) NOT NULL,
-  PRIMARY KEY (PersonID)
-);
+    CREATE DATABASE anydea;
+    USE anydea;
+    CREATE TABLE user (
+        PersonID INT AUTO_INCREMENT PRIMARY KEY,
+        NOME VARCHAR(100) NOT NULL,
+        EMAIL VARCHAR(100) NOT NULL,
+        SENHA VARCHAR(8) NOT NULL
+    );
+    CREATE TABLE posts (
+        ID INT AUTO_INCREMENT PRIMARY KEY,
+        titulo VARCHAR(255) NOT NULL,
+        conteudo TEXT,
+        CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
