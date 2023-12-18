@@ -36,19 +36,26 @@
     
     <div class="postagens">
 
-        <?php
-    include "../../src/CRUD/connection.php";
+    <?php
+    include "../CRUD/connection.php";
     
     $sql = "SELECT * FROM posts ORDER BY ID DESC";
     $resultado = $conn->query($sql);
+   
     
     if ($resultado->num_rows > 0) {
         while ($row = $resultado->fetch_assoc()) {
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
+           
             
-            echo "<h2>$titulo<h2>";
-            echo "<h3>$conteudo<h3>";
+            echo "<div class='title'>";
+            echo " <h2> Titulo: <br>$titulo<h2>";
+            echo "</div>";
+            
+            echo "<div class='conteudo'>";
+            echo "<p>Conteúdo: <br><br>$conteudo<p>";
+            echo "</div>";
             
         }
     }

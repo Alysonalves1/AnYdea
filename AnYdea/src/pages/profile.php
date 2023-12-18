@@ -32,7 +32,8 @@
                                 <h5>Nome</h5>
                             </div>
                             <div class="col-md-9 text-secondary">
-                                aaaa
+
+                              
                             </div>
                         </div>
                         <hr>
