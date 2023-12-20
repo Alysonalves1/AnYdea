@@ -63,11 +63,34 @@
                             <div class="row">
                                 <div class="col-md-3">
 
-                                    <br><button class="" type="button">editar perfil</button>
-                                    <h5>Contato:</h5>
+                                    
+                                    <h5>Email:</h5>
+                                    <?php
+                                include("../CRUD/connection.php");
+
+
+                                $email = $_SESSION['email'];
+
+                                $sql = "SELECT email FROM user WHERE email='$email'";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    $row = $result->fetch_assoc();
+                                    $emailUsuario = $row['email'];
+                                    echo "<h2>$emailUsuario</h2>";
+                                } else {
+                                    echo "Email de usuário não encontrado";
+                                }
+
+
+                                
+                                ?>
+                                <div>
+                                <button class="" type="button">editar perfil</button>
                                 </div>
-                                asfd
-                                <div class="col-md-9 text-secondary">
+                            </div>
+                                
+                               <br><div class="col-md-9 text-secondary">
                                     <form action="../CRUD/crud_user/delet_user.php" method="post">
                                         <input type="submit" name="delete_account" value="Excluir Conta">
                                     </form>

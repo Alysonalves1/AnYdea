@@ -47,8 +47,12 @@
                 $conteudo = $row['conteudo'];
 
                 echo "<h2>Publicado por: $criador</h2>";
-                echo "<h2>Titulo: <br>$titulo<h2>";
-                echo "<p>Conteúdo: <br>$conteudo<p>";
+                echo "<div class='title'>";
+                echo " <h2> Titulo: $titulo<h2>";
+                echo "<div class='conteudo'>";
+                echo "<p>Conteúdo: <br><br>$conteudo<p>";
+                echo "</div>";
+                echo "</div>";
             }
         }
 
