@@ -19,19 +19,21 @@
             <ul>
                 <!-- <li><img class="oi" src="./src/imagens/transferir2.png" alt="" width="30" height="35"></li> -->
                 <li><a href="./about2.php">Sobre</a></li>
-
+                
             </ul>
         </nav>
+        
         <a class="btn" href="./profile.php">Perfil</a>
+    </ul>
     </header>
     
     <ul>
-    <div class="text-post">
-        <h2>Faça um post agora!!</h2>
+
         <div class="container">
-            <a href="../pages/post.php">criar nova postagem</a><br>
+            <a href="../pages/post.php"><svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4"/>
+</svg></a><br>
         </div>
-    </div>
     </ul>
     
 

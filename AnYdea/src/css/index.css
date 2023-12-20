@@ -88,23 +88,26 @@ header img {
 .container a{
     display: inline-block;
     margin: 10px;
-    color: rgb(40, 4, 106);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     padding: 10px;
-    border: 1px solid rgb(40, 4, 106);
+    border: 1px solid rgb(0, 0, 0);
     background-color:white;
+    border-radius: 10px;
+    
 }
 
 .container a:hover{
     background-color: blueviolet;
     color: white;
     transition: background-color 1s;
+   
 }
 
-
-
-.text-post{
+.container{
     text-align: center;
+    padding-right: 25px;
+   
 }
 
 .postagens {
@@ -135,4 +138,9 @@ header img {
 }
 .conteudo{
     padding: 50px;
+}
+
+.plus{
+width: 45px;
+height: 45px;
 }

@@ -36,6 +36,7 @@
     FROM posts 
     INNER JOIN user ON posts.PersonID = user.PersonID 
     ORDER BY posts.PostID DESC";
+        
         $resultado = $conn->query($sql);
 
         if ($resultado->num_rows > 0) {
