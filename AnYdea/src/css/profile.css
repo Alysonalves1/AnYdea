@@ -9,17 +9,12 @@ body{
 
 }
 .topbar{
-<<<<<<< HEAD
     height: 60px;
     background-color: rgb(40, 4, 106);
-=======
-    background-color: rgb(26, 6, 82);
->>>>>>> bb524020c61c86b9b561d720076c56a7800ab8e5
     overflow: hidden;
 
 }
 .topbar a{
-<<<<<<< HEAD
     
     margin-right: 15px;
     margin-top: 15px;
@@ -30,14 +25,6 @@ body{
     
     /* text-align: center; */
     /* padding: 26px 10px; */
-=======
-    float: right;
-    color: whitesmoke;
-    text-align: center;
-    padding: 20px 26px;
-    text-decoration: none;
-    font-size: 26px;
->>>>>>> bb524020c61c86b9b561d720076c56a7800ab8e5
 }
 .sidebar{
     background-color: #333;

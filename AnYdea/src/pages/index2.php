@@ -53,13 +53,8 @@
             $criador = $row['nome'];
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
-<<<<<<< HEAD
-            echo "<h2>Publicado por: $criador</h2>";
-            echo "<h3>$titulo<h3>";
-            echo "<p>$conteudo<p>";
-=======
            
-            
+            echo "<h2>Publicado por: $criador</h2>";
             echo "<div class='title'>";
             echo " <h2> Titulo: <br>$titulo<h2>";
             echo "</div>";
@@ -67,7 +62,6 @@
             echo "<div class='conteudo'>";
             echo "<p>Conteúdo: <br><br>$conteudo<p>";
             echo "</div>";
->>>>>>> bb524020c61c86b9b561d720076c56a7800ab8e5
             
         }
     }
