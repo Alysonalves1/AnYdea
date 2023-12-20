@@ -30,8 +30,7 @@
 
                                 session_start();
 
-                                // Obter o nome do usuário da sessão ou de onde estiver armazenado
-                                $email = $_SESSION['email']; // Supondo que o email seja usado para identificar o usuário
+                                $email = $_SESSION['email'];
 
                                 $sql = "SELECT nome FROM user WHERE email='$email'";
                                 $result = $conn->query($sql);
@@ -39,12 +38,13 @@
                                 if ($result->num_rows > 0) {
                                     $row = $result->fetch_assoc();
                                     $nomeUsuario = $row['nome'];
-
-                                    // Exibir o nome do usuário na página
                                     echo "<h2>$nomeUsuario</h2>";
                                 } else {
                                     echo "Nome de usuário não encontrado";
                                 }
+
+
+                                
                                 ?>
 
 
@@ -52,22 +52,25 @@
                         </div>
                     </div>
 
-                    <a href="../CRUD/crud_posts/read_post.php">Meus posts</a>
-
+                    
                     <div class="col-md-8 mt-1">
                         <div class="card mb-3 content">
+                            <a href="../CRUD/crud_posts/read_post.php">Meus posts</a>
 
                             <div class="card-body">
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-3">
-                                    
+
                                     <br><button class="" type="button">editar perfil</button>
                                     <h5>Contato:</h5>
                                 </div>
                                 asfd
                                 <div class="col-md-9 text-secondary">
+                                    <form action="../CRUD/crud_user/delet_user.php" method="post">
+                                        <input type="submit" name="delete_account" value="Excluir Conta">
+                                    </form>
                                 </div>
                             </div>
                             <hr>

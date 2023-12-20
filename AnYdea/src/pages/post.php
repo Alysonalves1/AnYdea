@@ -20,22 +20,10 @@
     <input type="submit" href="../pages/index2.php" value="Publicar"><br>
     <a href="../pages/index2.php" >Cancelar</a>
     </form>
-    <!-- <div>
+    <div>
 
-    <h3>Faça um Comentário</h3> 
-
-    <form action="processar_comentario.php" method="post">
-        <input type="hidden" name="id_postagem" value="<?php echo $id_postagem; ?>">
-
-        <label for="nome_usuario">Seu Nome:</label>
-        <input type="text" id="nome_usuario" name="nome_usuario" required>
-
-        <label for="comentario">Comentário:</label>
-        <textarea id="comentario" name="comentario" rows="4" required></textarea>
-
-        <button type="submit">Enviar Comentário</button>
-    </form>
-</div> -->
+    
+</div>
 </div>
 </body>
 </html>

@@ -14,8 +14,7 @@
     <header>
         <nav>
             <ul>
-                <!-- <li><a href="index.php">Início</a></li>
-                <li><a href="sobre.html">Sobre</a></li> -->
+               
                 <li><a href="../../index.php">Inicio</a></li>
                 
             </header>
