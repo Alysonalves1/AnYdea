@@ -7,7 +7,7 @@ if (isset($_POST['create_user'])) {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-
+    
     // Verificar se o email já existe
     $checkEmailQuery = "SELECT * FROM user WHERE email = '$email'";
     $result = $conn->query($checkEmailQuery);

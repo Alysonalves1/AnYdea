@@ -37,8 +37,8 @@
 
     <div class="postagens">
 
-        <?php
-    include "../../src/CRUD/connection.php";
+    <?php
+    include "../CRUD/connection.php";
     
     $sql = "SELECT posts.titulo, posts.conteudo, user.nome 
     FROM posts 
@@ -46,15 +46,28 @@
     ORDER BY posts.PostID DESC";
 
     $resultado = $conn->query($sql);
+   
     
     if ($resultado->num_rows > 0) {
         while ($row = $resultado->fetch_assoc()) {
             $criador = $row['nome'];
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
+<<<<<<< HEAD
             echo "<h2>Publicado por: $criador</h2>";
             echo "<h3>$titulo<h3>";
             echo "<p>$conteudo<p>";
+=======
+           
+            
+            echo "<div class='title'>";
+            echo " <h2> Titulo: <br>$titulo<h2>";
+            echo "</div>";
+            
+            echo "<div class='conteudo'>";
+            echo "<p>Conteúdo: <br><br>$conteudo<p>";
+            echo "</div>";
+>>>>>>> bb524020c61c86b9b561d720076c56a7800ab8e5
             
         }
     }

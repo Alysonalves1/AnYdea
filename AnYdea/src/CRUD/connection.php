@@ -1,7 +1,11 @@
 <?php
 $host = "localhost";
 $user = "root";
+<<<<<<< HEAD
 $pass = "root";
+=======
+$pass = "ruan123";
+>>>>>>> bb524020c61c86b9b561d720076c56a7800ab8e5
 $database = "anydea";
 
 $conn = new mysqli($host, $user, $pass, $database);
