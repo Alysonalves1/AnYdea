@@ -10,10 +10,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "SELECT * FROM user WHERE email='$email' AND senha='$senha'";
     $result = $conn->query($sql);
+    $row = $result->fetch_array(MYSQLI_ASSOC);
+    $personID = $row["PersonID"];
+    
+    
+
+
+
+
+
+    
 
     if ($result->num_rows > 0) {
         header("location: ../../pages/index2.php");
         $_SESSION['email'] = $email;
+        $_SESSION['personID'] = $personID;
+        
         exit;
     } else {
         $_SESSION['mensagem'] = "Credenciais inválidas. Tente novamente.";

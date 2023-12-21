@@ -29,35 +29,44 @@
 
     <div class="postagens">
 
-        <?php
-        include "src/CRUD/connection.php";
-
-        $sql = "SELECT posts.titulo, posts.conteudo, user.nome 
+    <?php
+    include "../AnYdea/src/CRUD/connection.php";
+    
+    $sql = "SELECT posts.titulo, posts.conteudo, user.nome, posts.PostID, posts.PersonID
     FROM posts 
     INNER JOIN user ON posts.PersonID = user.PersonID 
     ORDER BY posts.PostID DESC";
-        
-        $resultado = $conn->query($sql);
 
-        if ($resultado->num_rows > 0) {
-            while ($row = $resultado->fetch_assoc()) {
-                $criador = $row['nome'];
+    $resultado = $conn->query($sql);
 
-                $titulo = $row['titulo'];
-                $conteudo = $row['conteudo'];
+    session_start();
+   
+    ?>
+    
+    <?php if ($resultado->num_rows > 0):
+         while ($row = $resultado->fetch_assoc()):
+            $criador = $row['nome'];
+            $titulo = $row['titulo'];
+            $conteudo = $row['conteudo'];
+            $id = $row['PostID'];
+            $personID = $row['PersonID'];
+           ?>
+        <div class='title' id='<?=$id?>'>
+            
+            <h2>Publicado por: <?=$criador?></h2>
+                
+                <h2> Titulo: <br><?=$titulo?><h2>
+            
+                <div class='conteudo'>
+                    
+                    <p>Conteúdo: <br><br><?=$conteudo?><p>
+                       <!-- <p><?php var_dump($_SESSION)?></p>       -->
+                </div>
 
-                echo "<h2>Publicado por: $criador</h2>";
-                echo "<div class='title'>";
-                echo " <h2> Titulo: $titulo<h2>";
-                echo "<div class='conteudo'>";
-                echo "<p>Conteúdo: <br><br>$conteudo<p>";
-                echo "</div>";
-                echo "</div>";
-            }
-        }
-
-
-        $conn->close();
+        <?php 
+            endwhile;
+            endif;
+            $conn->close();
         ?>
 
     </div>

@@ -41,7 +41,7 @@
                 
             </div>
             
-            <a class="back" href="../../index.php">voltar</a>
+            <a class="back" href="../../index.php">Voltar</a>
             
         </div>
     </form>

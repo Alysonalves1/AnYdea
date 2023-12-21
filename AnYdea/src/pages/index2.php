@@ -42,34 +42,54 @@
     <?php
     include "../CRUD/connection.php";
     
-    $sql = "SELECT posts.titulo, posts.conteudo, user.nome 
+    $sql = "SELECT posts.titulo, posts.conteudo, user.nome, posts.PostID, posts.PersonID
     FROM posts 
     INNER JOIN user ON posts.PersonID = user.PersonID 
     ORDER BY posts.PostID DESC";
 
     $resultado = $conn->query($sql);
+
+    session_start();
    
+    ?>
     
-    if ($resultado->num_rows > 0) {
-        while ($row = $resultado->fetch_assoc()) {
+    <?php if ($resultado->num_rows > 0):
+         while ($row = $resultado->fetch_assoc()):
             $criador = $row['nome'];
             $titulo = $row['titulo'];
             $conteudo = $row['conteudo'];
-           
-            echo "<h2>Publicado por: $criador</h2>";
-            echo "<div class='title'>";
-            echo " <h2> Titulo: <br>$titulo<h2>";
-            echo "<div class='conteudo'>";
-            echo "<p>Conteúdo: <br><br>$conteudo<p>";
-            echo "</div>";
-            echo "</div>";
+            $id = $row['PostID'];
+            $personID = $row['PersonID'];
+           ?>
+        <div class='title' id='<?=$id?>'>
             
-        }
-    }
+            <h2>Publicado por: <?=$criador?></h2>
+                
+                <h2> Titulo: <br><?=$titulo?><h2>
+            
+                <div class='conteudo'>
+                    
+                    <p>Conteúdo: <br><br><?=$conteudo?><p>
+                       <!-- <p><?php var_dump($_SESSION)?></p>       -->
+                </div>
+                <?php if ($personID === $_SESSION['personID']):
+                ?>
+                    <form action="../CRUD/crud_posts/delete.php" method="post">
+                    <input value="<?=$id?>" name="postID" style="display: none;">
+                    <button type="submit">Deletar</button>
+                </form>
+                <?php endif ?>
+            </div>
+        
+            
+        <?php 
+        endwhile;
+        endif;
+        $conn->close();
+        ?>
 
     
-    $conn->close();
-    ?>
+ 
 
 </div>
 

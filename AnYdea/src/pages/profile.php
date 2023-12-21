@@ -91,8 +91,11 @@
                             </div>
                                 
                                <br><div class="col-md-9 text-secondary">
-                                    <form action="../CRUD/crud_user/delet_user.php" method="post">
-                                        <input type="submit" name="delete_account" value="Excluir Conta">
+                                    <form action="../CRUD/crud_user/delete_user.php" method="post">
+                                        <input style="display: none;" name="personID" value="<?php $_SESSION['personID']?>" >
+                                    <button type="submit">
+Deletar Conta
+                                     </button>
                                     </form>
                                 </div>
                             </div>
